@@ -9,13 +9,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #9221dd, #1ceee7);
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
   overflow: hidden;
 }
 
 .scene {
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 220px;
   perspective: 1000px;
 }
 
@@ -24,26 +24,19 @@ body {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate 10s infinite linear;
+  animation: rotate 15s linear infinite;
 }
 
 .slider img {
   position: absolute;
   width: 260px;
   height: 160px;
-  left: 20px;
-  top: 20px;
-  border-radius: 12px;
+  left: 30px;
+  top: 30px;
+  border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
-
-/* Position images in 3D space */
-.slider img:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
-.slider img:nth-child(2) { transform: rotateY(72deg) translateZ(400px); }
-.slider img:nth-child(3) { transform: rotateY(144deg) translateZ(400px); }
-.slider img:nth-child(4) { transform: rotateY(216deg) translateZ(400px); }
-.slider img:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
 
 @keyframes rotate {
   from { transform: rotateY(0deg); }

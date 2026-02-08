@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #9221dd, #1ceee7);
+  overflow: hidden;
+}
+
+.scene {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+}
+
+.slider img {
+  position: absolute;
+  width: 260px;
+  height: 160px;
+  left: 20px;
+  top: 20px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Position images in 3D space */
+.slider img:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
+.slider img:nth-child(2) { transform: rotateY(72deg) translateZ(400px); }
+.slider img:nth-child(3) { transform: rotateY(144deg) translateZ(400px); }
+.slider img:nth-child(4) { transform: rotateY(216deg) translateZ(400px); }
+.slider img:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
+
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}

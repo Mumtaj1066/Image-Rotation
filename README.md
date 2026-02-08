@@ -1,1 +1,1 @@
-# Image-Rotation
+# 3D Rotation Image Slider
